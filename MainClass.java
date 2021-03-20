@@ -44,7 +44,7 @@ public class MainClass {
         treeRim = new TreeMap<>();
         BufferedInputStream read = null;
         try {
-            read = new BufferedInputStream(new FileInputStream("C:\\program\\Rim.txt"));
+            read = new BufferedInputStream(new FileInputStream("Rim.txt"));
 
             int length = read.available();
             byte [] bytes = new byte[length];
