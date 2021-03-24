@@ -43,8 +43,10 @@ public class MainClass {
     public static void readFail(){
         treeRim = new TreeMap<>();
         BufferedInputStream read = null;
+        System.out.println("УКАЖАТЕ ПУТЬ К ФАЙЛУ ГДЕ ЛЕЖИТЬ ФАЙЛ Rim.txt");
+        String thePathTotheFile = scanner.nextLine();
         try {
-            read = new BufferedInputStream(new FileInputStream("Rim.txt"));
+            read = new BufferedInputStream(new FileInputStream(thePathTotheFile));
 
             int length = read.available();
             byte [] bytes = new byte[length];
@@ -58,7 +60,7 @@ public class MainClass {
 
             }
         } catch (Exception e) {
-            System.out.println("Файл не найден");
+            System.out.println("ERROR: Файл не найден");
         }
     }
 
